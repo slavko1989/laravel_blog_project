@@ -39,3 +39,23 @@
 @if(session()->has('error_update_post'))
 <p style="color: red; font-family: cursive;font-weight: bolder;" class="alert alert-success">{{ session()->get('error_update_post') }}</p>
 @endif
+
+@if(session()->has('mess_true_tag'))
+<p style="color: red; font-family: cursive;font-weight: bolder;" class="alert alert-success">{{ session()->get('mess_true_tag') }}</p>
+@endif
+
+@if(session()->has('mess_false_tag'))
+<p style="color: red; font-family: cursive;font-weight: bolder;" class="alert alert-success">{{ session()->get('mess_false_tag') }}</p>
+@endif
+
+@if(session()->has('mess_del_tag'))
+<p style="color: red; font-family: cursive;font-weight: bolder;" class="alert alert-success">{{ session()->get('mess_false_tag') }}</p>
+@endif
+
+@if(session()->has('mess_true_edit_tag'))
+<p style="color: red; font-family: cursive;font-weight: bolder;" class="alert alert-success">{{ session()->get('mess_true_edit_tag') }}</p>
+@endif
+
+@if(session()->has('mess_false_edit_tag'))
+<p style="color: red; font-family: cursive;font-weight: bolder;" class="alert alert-success">{{ session()->get('mess_false_edit_tag') }}</p>
+@endif

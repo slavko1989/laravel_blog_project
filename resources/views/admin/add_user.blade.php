@@ -29,9 +29,9 @@
 
 <x-mess_for_cat> </x-mess_for_cat>
 
- @include('admin.post_form')
-  
-<x-show_post :post='$post'></x-show_post>
+<x-form_users> </x-form_users>
+
+<x-show_users :users='$users'> </x-show_users>
 
     </div>
     </div>

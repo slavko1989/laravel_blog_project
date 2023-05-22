@@ -6,15 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Post;
 
-class Category extends Model
+class Tag extends Model
 {
     use HasFactory;
-
-    protected $fillable = ['id','cat_name'];
+    protected $fillable =['tag_name','id'];
 
     public function posts(){
-        return $this->hasMany(Post::class,'cat_id','id');
+        return $this->hasMany(Post::class,'tag_id','id');
     }
-
-    
 }

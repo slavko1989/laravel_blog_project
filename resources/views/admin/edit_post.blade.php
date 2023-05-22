@@ -33,6 +33,7 @@
   <!-- Name input -->
   @csrf
   <input type="hidden" name="cat_id">
+  <input type="hidden" name="tag_id">
   <input type="hidden" name="id" value="{{ $edit_post->id }}">
   <div class="form-outline mb-4">
     <input type="text" id="form4Example1" class="form-control" name="title" value="{{ $edit_post->title }}">
@@ -63,6 +64,10 @@
 
   <div class="form-outline mb-4">
       <x-update_post :category='$category'> </x-update_post>
+  </div><br><br>
+
+  <div class="form-outline mb-4">
+      <x-update_tags :tags='$tags'> </x-update_tags>
   </div><br><br>
 
 

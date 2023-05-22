@@ -6,7 +6,30 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        @auth
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/" active>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('admin/logout') }}">Logout</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Account</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('users_views/live_search') }}">Live search</a>
+        </li>
+        @else
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/" active>Home</a>
         </li>
@@ -22,14 +45,12 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Contact</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Account</a>
-        </li>
+       
         <li class="nav-item">
           <a class="nav-link" href="{{ url('users_views/live_search') }}">Live search</a>
         </li>
-       
-        
+        @endauth
+
       </ul>
       <form class="d-flex" role="search" action="{{ url('users_views/search') }}">
         <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="search">
@@ -38,4 +59,5 @@
     </div>
   </div>
 </nav>
+
 </header>

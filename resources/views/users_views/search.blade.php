@@ -49,7 +49,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <div class="w3-col l4">
     <!-- About Card -->
     <div class="w3-card w3-margin w3-margin-top">
-      <img src="images/php2.jpg" style="width:100%">
+      <img src="{{ asset('images/php2.jpg') }}" style="width:100%">
       <div class="w3-container w3-white">
         <h4><b>Junior developer</b></h4>
         <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
@@ -79,7 +79,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       <div class="w3-container w3-padding">
         <h4>Tags</h4>
       </div>
-       @include('layout.tags')
+       <x-tags_view :tag='$tag'></x-tags_view>
     </div>
   
   <!-- END Introduction Menu -->

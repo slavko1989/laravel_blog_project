@@ -22,8 +22,8 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <div class="w3-col l8 s12">
     <!-- Blog entry -->
     
-
-  <x-int_post_byCat :category_post='$category_post'></x-int_post_byCat>
+<x-interface_tags :tag_post='$tag_post'></x-interface_tags>
+  
 
     <hr>
     
@@ -44,7 +44,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <!-- Posts -->
     <div class="w3-card w3-margin">
       <div class="w3-container w3-padding">
-        <h4>Latest Post</h4>
+        <h4>Latest Posts</h4>
       </div>
       <x-lastPost :lastPost='$lastPost'></x-lastPost>
     </div>
@@ -58,12 +58,13 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       </ul>
     </div>
     <hr>
+    
     <!-- Labels / tags -->
     <div class="w3-card w3-margin">
       <div class="w3-container w3-padding">
         <h4>Tags</h4>
       </div>
-      <x-tags_view :tag='$tag'></x-tags_view>
+    <x-tags_view :tag='$tag'></x-tags_view>
   </div>
   
   <!-- END Introduction Menu -->

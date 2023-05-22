@@ -20,23 +20,18 @@
     }
   </style>
 
-  @include('admin.layout.links')
+@include('admin.layout.links')
 @include('admin.layout.sidebar')
 
 @section('main')
     <div class="col-sm-9">
       <div class="well">
 
-<x-mess_for_cat> </x-mess_for_cat>
-
- @include('admin.post_form')
-  
-<x-show_post :post='$post'></x-show_post>
-
+    <x-mess_for_cat> </x-mess_for_cat>
+    <x-form_tag> </x-form_tag>
+    <x-show_tag :tag='$tag'> </x-show_tag>
+ 
+      </div>
     </div>
-    </div>
-
   </div>
-
-
 @endsection

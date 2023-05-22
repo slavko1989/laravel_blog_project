@@ -1,7 +1,4 @@
-  
-@props(['category'])
-
-  <form method="post" action="{{ url('admin/add_post') }}" enctype="multipart/form-data">
+ <form method="post" action="{{ url('admin/add_post') }}" enctype="multipart/form-data">
   <!-- Name input -->
   @csrf
   <input type="hidden" name="cat_id">
@@ -56,4 +53,3 @@
   <!-- Submit button -->
   <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
 </form>
-  

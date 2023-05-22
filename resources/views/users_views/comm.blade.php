@@ -39,7 +39,7 @@
            
             
             @endif
-            <small class="ms-3 text-primary">{{ $comm->created_at }}</small>
+            <small class="ms-3 text-primary">{{ $comm->created_at }} </small>
             </p>
 
             <div class="d-flex justify-content-between">

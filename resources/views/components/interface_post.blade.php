@@ -14,9 +14,7 @@
         <div class="w3-col m8 s12">
           <p><a class="w3-button w3-padding-large w3-white w3-border" href="{{ url('users_views/single_post/'.$post->id) }}"><b>READ MORE »</b></a></p>
         </div>
-        <div class="w3-col m4 w3-hide-small">
-          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
-        </div>
+        
       </div>
     </div>
     

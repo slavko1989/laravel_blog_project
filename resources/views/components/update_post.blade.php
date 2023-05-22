@@ -7,4 +7,4 @@
       <option value="{{ $cat->id }}">{{ $cat->cat_name }}</option>
       
       @endforeach
-    </select>
+</select>
