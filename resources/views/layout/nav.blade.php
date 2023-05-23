@@ -21,7 +21,7 @@
           <a class="nav-link" href="#">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="{{ url('users_views/contact_page') }}">Contact</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Account</a>
@@ -43,7 +43,7 @@
           <a class="nav-link" href="#">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="{{ url('users_views/contact_page') }}">Contact</a>
         </li>
        
         <li class="nav-item">

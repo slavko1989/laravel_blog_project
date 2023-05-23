@@ -7,6 +7,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TagController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,10 +24,12 @@ use App\Http\Controllers\TagController;
     return view('welcome');
 });*/
 
-Route::controller(AdminController::class)->group(function() {
-    Route::get('/','index');
-    Route::get('admin/index','admin_home')->middleware(['auth','isAdmin']);
-    Route::get('admin/logout','logout');
+
+
+Route::controller(ContactController::class)->group(function() {
+    Route::get('users_views/contact_page','contact_page');
+    Route::post('users_views/contact_page','send_contact_mail');
+    
 });
 
 Route::controller(UserController::class)->group(function() {
@@ -78,3 +81,8 @@ Route::middleware([
     })->name('dashboard');
 });
 //Auth::routes(['verify' => true]);
+Route::controller(AdminController::class)->group(function() {
+    Route::get('/','index');
+    Route::get('admin/index','admin_home')->middleware(['auth','isAdmin']);
+    Route::get('admin/logout','logout');
+});
