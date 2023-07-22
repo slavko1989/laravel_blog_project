@@ -34,7 +34,9 @@ Route::controller(ContactController::class)->group(function() {
 
 Route::controller(UserController::class)->group(function() {
     Route::get('admin/add_user','add_users')->middleware(['auth','isAdmin']);
-    
+    Route::get('users_views/single_post/{id}','delete_comm');
+    Route::get('users_views/edit_comm/{id}','edit_comm');
+    Route::post('users_views/edit_comm/{id}','update_comm');  
 });
 
 Route::controller(PostController::class)->group(function() {
@@ -68,7 +70,7 @@ Route::controller(TagController::class)->middleware(['auth','isAdmin'])->group(f
 });
 
 Route::controller(CommentController::class)->group(function() {
-       Route::post('users_views/single_post/{id}','store_comm');  
+       Route::post('users_views/single_post/{id}','store_comm'); 
 });
 
 Route::middleware([

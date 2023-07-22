@@ -26,9 +26,7 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Account</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url('users_views/live_search') }}">Live search</a>
-        </li>
+        
         @else
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/" active>Home</a>
@@ -46,9 +44,7 @@
           <a class="nav-link" href="{{ url('users_views/contact_page') }}">Contact</a>
         </li>
        
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url('users_views/live_search') }}">Live search</a>
-        </li>
+        
         @endauth
 
       </ul>

@@ -16,9 +16,9 @@
 
 
 
-
           <form method="post" action="{{ url('users_views/single_post/'.$post->id) }}">
             @csrf
+            <input type="hidden" name="id">
             <input type="hidden" name="post_id">
             <input type="hidden" name="user_id">
           <textarea type="text" id="addANote" class="form-control" placeholder="Type comment..." name="comment" style="margin: 2px;" value="{{ old('comment') }}"></textarea>
@@ -52,8 +52,8 @@
               <div class="d-flex flex-row align-items-center">
                 <p class="small text-muted mb-0">
                   @if(Auth::check() && Auth::id()==$comm->user_id)
-                  <a href="">EDIT</a>
-                  <a href="" style="color: red;">DELETE</a>
+                  <a href="{{ url('users_views/edit_comm/'. $comm->id) }}">EDIT</a>
+                  <a href="{{ url('users_views/single_post/'. $comm->id) }}" style="color: red;">DELETE</a>
                   @else
                   {{ 'login to delete or edit your comments' }}
                   @endif

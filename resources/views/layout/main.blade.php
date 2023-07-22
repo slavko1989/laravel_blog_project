@@ -9,7 +9,7 @@
 <body class="w3-light-grey">
   <div class="w3-content" style="max-width:1400px">
     
-    @yield('top-3')
+    
     
     @yield('posts')
     @yield('sidebar')

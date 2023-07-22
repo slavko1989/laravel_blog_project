@@ -8,6 +8,10 @@
 <p style="color: red; font-family: cursive;font-weight: bolder;" class="alert alert-success">{{ session()->get('mess') }}</p>
 @endif
 
+@if(session()->has('update_comm'))
+<p style="color: red; font-family: cursive;font-weight: bolder;" class="alert alert-success">{{ session()->get('update_comm') }}</p>
+@endif
+
 @if(session()->has('mess_false_cat'))
 <p style="color: red; font-family: cursive;font-weight: bolder;" class="alert alert-success">{{ session()->get('mess_false_cat') }}</p>
 @endif

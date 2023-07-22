@@ -18,20 +18,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
 @include('layout.header')
 @include('layout.nav')
-@section('top-3')
-<section class="featured container my-5">
-  <div class="row">
-    <div class="one col-lg-4 col-md-6 col-12 mb-3">
-      <img class="img-fluid" src="images/php1.jpg">
-    </div>
-    <div class="one col-lg-4 col-md-6 col-12">
-      <img class="img-fluid" src="images/php1.jpg">
-    </div>
-    <div class="one col-lg-4 col-md-6 col-12">
-      <img class="img-fluid" src="images/php1.jpg">
-    </div>
-  </div>
-</section>
+
 @include('layout.subscribe')
 @section('posts')
 <!-- Grid -->
