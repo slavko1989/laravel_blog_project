@@ -34,7 +34,8 @@ Route::controller(ContactController::class)->group(function() {
 
 Route::controller(UserController::class)->group(function() {
     Route::get('admin/add_user','add_users')->middleware(['auth','isAdmin']);
-    Route::get('users_views/single_post/{id}','delete_comm');
+    Route::get('users_views/delete_comm/{id}','delete_comm_page');
+    Route::get('users_views/delete_comm/{id}','delete_comm');
     Route::get('users_views/edit_comm/{id}','edit_comm');
     Route::post('users_views/edit_comm/{id}','update_comm');  
 });

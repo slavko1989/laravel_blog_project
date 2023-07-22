@@ -41,10 +41,14 @@ class UserController extends Controller
    public function update_comm(Request $request, $id){
 
       $update = Comment::find($id);
-      //dd($update);exit;
       $update->comment = $request->input('comment');
       $update->update();
       return redirect('users_views/single_post/'. $update->post_id)->with('update_comm','Comment are updated');
+   }
+
+   public function delete_comm_page($id){
+
+      return view("users_views/delete_comm");
    }
 
     public function delete_comm($id){
@@ -52,6 +56,6 @@ class UserController extends Controller
 
       $comm->delete();
 
-      return redirect()->back(); 
+     return redirect('users_views/single_post/'. $comm->post_id)->with('delete_comm','Comment are deleted'); 
     }
 }

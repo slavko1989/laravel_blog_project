@@ -53,7 +53,7 @@
                 <p class="small text-muted mb-0">
                   @if(Auth::check() && Auth::id()==$comm->user_id)
                   <a href="{{ url('users_views/edit_comm/'. $comm->id) }}">EDIT</a>
-                  <a href="{{ url('users_views/single_post/'. $comm->id) }}" style="color: red;">DELETE</a>
+                  <a href="{{ url('users_views/delete_comm/'. $comm->id) }}" style="color: red;">DELETE</a>
                   @else
                   {{ 'login to delete or edit your comments' }}
                   @endif
