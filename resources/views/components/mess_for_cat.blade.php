@@ -8,6 +8,12 @@
 <p style="color: red; font-family: cursive;font-weight: bolder;" class="alert alert-success">{{ session()->get('mess') }}</p>
 @endif
 
+@if(session()->has('status_ban'))
+<p style="color: red; font-family: cursive;font-weight: bolder;" class="alert alert-success">{{ session()->get('status_ban') }}</p>
+@endif
+
+
+
 @if(session()->has('delete_comm'))
 <p style="color: red; font-family: cursive;font-weight: bolder;" class="alert alert-success">{{ session()->get('delete_comm') }}</p>
 @endif

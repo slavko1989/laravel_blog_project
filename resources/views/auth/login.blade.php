@@ -4,6 +4,9 @@
         <x-slot name="logo">
             <x-authentication-card-logo />
         </x-slot>
+
+<x-mess_for_cat> </x-mess_for_cat>
+        
         @if (session('status'))
             <div class="mb-4 font-medium text-sm text-green-600">
                 {{ session('status') }}

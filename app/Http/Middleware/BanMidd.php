@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Auth;
 
-class AdminMidd
+class BanMidd
 {
     /**
      * Handle an incoming request.
@@ -18,19 +18,17 @@ class AdminMidd
     public function handle(Request $request, Closure $next)
     {
 
-        if(Auth::check()){
-            if(Auth::user()->role_as == '1'){
-                return $next($request);
-                return redirect('admin.index');
-            }elseif(Auth::user()->role_as == '0'){
-                return redirect('/');
+        if(Auth::check() && Auth::user()->status){
+            $banned = Auth::user()->status == "1";
+            Auth::logout();
+            if($banned=="1"){
+                $message = 'Your account  is banned,contact Admin';
             }
-        
-        }else{
 
-            return redirect()->back()->with('message','You are not admin');
+            return redirect('login')->with('status_ban',$message);
         }
 
-        
+
+        return $next($request);
     }
 }

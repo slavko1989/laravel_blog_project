@@ -53,9 +53,9 @@ class UserController extends Controller
 
     public function delete_comm($id){
       $comm = Comment::where('id',$id)->firstOrFail();
-
       $comm->delete();
-
      return redirect('users_views/single_post/'. $comm->post_id)->with('delete_comm','Comment are deleted'); 
     }
+
+    
 }

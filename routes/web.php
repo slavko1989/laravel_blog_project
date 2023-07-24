@@ -85,7 +85,7 @@ Route::middleware([
 });
 //Auth::routes(['verify' => true]);
 Route::controller(AdminController::class)->group(function() {
-    Route::get('/','index');
+    Route::get('/','index')->middleware(['auth','isBanned']);
     Route::get('admin/index','admin_home')->middleware(['auth','isAdmin']);
     Route::get('admin/logout','logout');
 });
